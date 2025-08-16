@@ -1,0 +1,429 @@
+/* General Styling */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+p{
+    color: rgb(85, 85, 85);
+}
+
+/* Transition */
+
+a, 
+.btn {
+    transition: all 300ms ease;
+}
+
+/* Desktop nav */
+
+nav, 
+.nav-links {
+    display: flex;
+}
+
+nav {
+    justify-content: space-around;
+    align-items: center;
+    height: 17vh;
+}
+
+.nav-links {
+    gap: 1rem;
+    list-style: none;
+    font-size: 1.2rem;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    text-decoration-color: white;
+}
+
+a:hover {
+    color: grey;
+    text-decoration: rgb(181, 181, 181);
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+}
+
+.logo {
+    font-size: 1rem;
+}
+
+.logo:hover{
+    cursor: default;
+}
+
+
+/* Hamburger Menu */
+
+#hamburger-nav {
+    display: none;
+}
+
+.hamburger-menu {
+    position: relative;
+    display: inline-block;
+}
+
+.hamburger-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    width: 30px;
+    cursor: pointer;
+}
+
+.hamburger-icon span{
+    background-color: black;
+    width: 100%;
+    height: 2px;
+    transform: all 0.3 ease-in-out;
+}
+
+.menu-links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: white;
+    width: fit-content;
+    max-height: 0;
+    overflow: hidden;
+    transform: all 0.3 ease-in-out;
+}
+
+.menu-links a {
+    display: block;
+    padding: 10px;
+    font-size: 1.5rem;
+    text-align: center;
+    color: #000;
+    text-decoration: none;
+    transition: all 0.3 ease-in-out;
+}
+
+.menu-links li {
+    list-style: none;
+}
+
+.menu-links.open {
+    max-height: 300px;
+}
+
+.hamburger-icon.open span:first-child {
+    transform: rotate(45deg) translate(10px, 5px);
+}
+
+.hamburger-icon.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-icon.open span:last-child {
+    transform: rotate(-45deg) translate(10px, -5px);
+}
+
+.hamburger-icon span:first-child {
+    transform: none;
+}
+.hamburger-icon span:first-child {
+    opacity: 1;
+}
+.hamburger-icon span:first-child {
+    transform: none;
+}
+
+/* Section */
+
+section {
+    padding-top: 4vh;
+    height: 96vh;
+    margin: 0 10 rem;
+    box-sizing: border-box;
+    min-height: fit-content;
+}
+
+.section-container{
+    display: flex;
+}
+
+/*  Profile Section */
+
+#profile {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    height: 80vh;
+}
+
+.section_pic-container {
+    display: flex;
+    height: 400px;
+    width: 400px;
+    margin: auto;
+}
+
+.section_text {
+    margin: auto;
+    align-self: center;
+    text-align: center;
+}
+
+.section_text p {
+    font-weight: 600;
+}
+.section_text_p1 {
+    text-align: center;
+
+}
+.section_text_p2 {
+        font-size: 1.75rem;
+        margin-bottom: 1rem;
+}
+
+.title {
+    font-size: 3rem;
+    text-align: center;
+}
+
+#social-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    gap: 1rem;
+}
+
+.icons {
+    margin-top: 1rem;
+    cursor: pointer;
+    height: 2rem;
+}
+
+/* Buttons */
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.btn {
+    font-weight: 600;
+    transition: all 300ms ease;
+    padding: 1rem;
+    width: 8rem;
+    border-radius: 2rem;
+}
+
+.btn-color-1,
+.btn-color-2 {
+    background: transparent;
+    border: rgb(53,53,53) 0.1rem solid;
+    background: rgb(0,0,0);
+
+}
+
+.btn-color-1:hover,
+.btn-color-2:hover {
+    cursor: pointer;
+}
+
+.btn-color-1,
+.btn-color-2:hover {
+    border: rgb(53,53,53) 0.1rem solid;
+    color: white;
+}
+
+.btn-color-1:hover {
+    background: rgb(50, 49, 49);
+}
+
+.btn-color-2 {
+    background: none;
+}
+
+.btn-color-2:hover {
+     background: rgb(0, 0, 0);
+}
+
+.btn-container {
+    gap: 1rem;
+}
+
+
+/* About Section */
+
+#about {
+    position: relative;
+    margin: auto;
+    text-align: center;
+}
+
+.about-container {
+    gap: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column; /* stack image + details vertically */
+    align-items: center;
+}
+
+.about-details-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* gap: 2rem; */
+}
+
+.about-containers {
+    display: flex;
+    margin-right: 40px;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap; /* responsive for smaller screens */
+}
+
+.details-container {
+    padding: 1.5rem;
+    flex: 1;
+    min-width: 100px; /* prevents shrinking too much */
+    min-height: 100px;
+    max-width: 500px;
+    max-height: 500px ;
+    background: white;
+    /* border-radius: 2rem; */
+    /* border: rgb(163,163,163) 0.1rem solid; */
+    text-align: center;
+    
+}
+
+.text-container {
+    margin-top: 1rem;
+}
+
+.about-pic {
+    margin: 0 30px;
+    border-radius: 2rem;
+    width: 400px;
+    height: 400px;
+}
+
+.icon {
+    width: 30px;
+}
+
+.icon-arrow {
+    display: flex;
+    position: absolute;
+    width: 50px;
+    right: 1rem;
+    margin-bottom: 10px;
+}
+
+.section-container{
+    gap: 1rem;
+    height: 80%;
+}
+
+.section_pic-container{
+    height: 400px;
+    width: 400px;
+    margin: 4rem auto;
+}
+
+/* === EXPERIENCE FIX PATCH (put at end of style.css) === */
+
+/* 1) Fix the invalid margin value on sections */
+section {
+  margin: 0 10rem; /* remove the space between 10 and rem */
+}
+
+/* 2) Let the Experience section grow naturally (no forced 96vh) */
+#experience {
+  height: auto;
+  padding-block: 4rem;      /* space above & below */
+  margin-top: 2rem;         /* space from the previous section */
+  text-align: center;
+}
+
+/* Optional: smooth anchor offset so section headings don't stick to the top */
+section { scroll-margin-top: 6rem; }
+
+/* 3) Proper layout for the cards */
+.experience-detail-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 2rem;                /* space between boxes */
+  margin-top: 1.5rem;       /* space below the "Experience" title */
+}
+
+/* 4) Card styling */
+.details-container {
+  background: #fff;
+  border: 0.1rem solid rgb(163,163,163);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  width: 320px;             /* consistent card width */
+  text-align: left;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+}
+
+/* 5) Card title spacing */
+.experience-sub-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: rgb(53,53,53);
+  text-align: center;
+}
+
+/* 6) Skills grid inside each card */
+.article-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* two columns of skills */
+  gap: 1rem;
+}
+
+.article-container article {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.article-container h3 {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.article-container p {
+  font-size: 0.9rem;
+  color: grey;
+}
+
+article icon {
+    cursor: default;
+}
+
+/* 7) Small tidy-ups (typos that can break transitions) */
+.hamburger-icon span,
+.menu-links,
+.menu-links a {
+  transition: all 0.3s ease-in-out;  /* was mistakenly written as transform */
+}
